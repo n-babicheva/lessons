@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	// stdout
-	//fmt.Println("Hello World")
+	fmt.Println("Hello World")
 
 	// stdin
 	var a int
