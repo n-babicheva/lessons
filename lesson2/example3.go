@@ -5,43 +5,55 @@ import (
 	"strings"
 )
 
+// Пример работы с пакетом strings
 func main() {
+	// Объявляем переменную s1 типа string, инициализируем ее пустой строкой
 	var s1 string
-	fmt.Println(s1)
+	fmt.Println(s1) // Выводим пустую строку
 
+	// Объявляем переменную s2 типа string, инициализируем ее строкой "hello world"
 	s2 := "hello world"
-	fmt.Println(s2)
+	fmt.Println(s2) // Выводим строку "hello world"
 
-	fmt.Println(len(s2))
+	// Выводим длину строки s2
+	fmt.Println(len(s2)) // Выводим 11
 
-	/**
-		hello world
-		0123456789X
-	   [0...4]
-	*/
+	// Выводим первые 5 символов строки s2
+	fmt.Println(s2[:5]) // Выводим строку "hello"
 
-	fmt.Println(s2[:5]) // отрезать от строки первые 5 символов
-	fmt.Println(s2[6:]) // отрезаем от строки все символы начиная с 6го
+	// Выводим все символы строки s2 начиная с 6го
+	fmt.Println(s2[6:]) // Выводим строку "world"
 
-	fmt.Println(strings.Contains("hello world", "world")) // провека вхождения подстроки в строку - false/true
+	// Проверяем, содержит ли строка "hello world" подстроку "world"
+	fmt.Println(strings.Contains("hello world", "world")) // Выводим true
 
-	fmt.Println(strings.Count("world world", "world")) // подсчет количества вхождений подстроки в строку
+	// Подсчитываем количество вхождений подстроки "world" в строку "world world"
+	fmt.Println(strings.Count("world world", "world")) // Выводим число 2
 
-	fmt.Println(strings.Index("hello world", "world")) // индекс начала вхождения
+	// Выводим индекс начала вхождения подстроки "world" в строку "hello world"
+	fmt.Println(strings.Index("hello world", "world")) // Выводим число 6
 
+	// Объявляем строку str
 	str := `asdfasdfasdf
 	asdfasdfasdfsadf hello world
 	adfasdfasdf
 	`
 
+	// Находим индекс начала вхождения подстроки "hello" в строку str
 	pos := strings.Index(str, "hello")
 
-	fmt.Println(str[pos : pos+11]) //вырезать из строки подстроку
+	// Выводим подстроку, которая начинается с индекса pos и длиной 11 символов
+	fmt.Println(str[pos : pos+11]) // Выводим строку "hello world"
 
-	fmt.Println(strings.ToUpper("hello world")) // HELLO WORLD
-	fmt.Println(strings.ToLower("HELLO WORLD")) // hello world
+	// Выводим строку "hello world" в верхнем регистре
+	fmt.Println(strings.ToUpper("hello world")) // Выводим строку "HELLO WORLD"
 
-	fmt.Println(strings.Repeat("hello world ", 5))
+	// Выводим строку "HELLO WORLD" в нижнем регистре
+	fmt.Println(strings.ToLower("HELLO WORLD")) // Выводим строку "hello world"
 
-	fmt.Println(strings.Fields("hola mi")) // ["hola", "mi"]
+	// Повторяем строку "hello world" 5 раз и выводим результат
+	fmt.Println(strings.Repeat("hello world ", 5)) // Выводим строку "hello world hello world hello world hello world hello world "
+
+	// Разбиваем строку "hola mi" на массив строк по пробелам
+	fmt.Println(strings.Fields("hola mi")) // Выводим массив строк ["hola", "mi"]
 }
