@@ -23,5 +23,5 @@ func main() {
 		fmt.Println("Error:", err)
 	}
 
-	fmt.Printf("Result: %d", a+b)
+	fmt.Printf("Result: %d", a+b) //вывод числа
 }
